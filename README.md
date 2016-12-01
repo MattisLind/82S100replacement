@@ -5,6 +5,8 @@ A CPLD implementation of the classic 82S100/82S101 as used in for example C64
 
 The WinCUPL code is taken directly from the VHDL made by Thomas 'skoe' Giesel and simply translated into WinCUPL. Skoe made an excellent [description](http://skoe.de/docs/c64-dissected/pla/c64_pla_dissected_r1.1_a4ds.pdf) on the C64 PLA which is very well worth reading.
 
+The small board is available as a shared project at [OSHPark](https://oshpark.com/shared_projects/fJN4h1Z9). Anyone is welcome to use the production files, Diptrace files and WinCUPL the way they like. But don't blame me if you get problems (or destroy your computer or someone else's computer...). It works fine for me and your mileage may vary.
+
 Yes. I am aware that I did a small mistake in that the JTAG connector doesn't have 0.1" pitch.
 
 ![In C64](http://i.imgur.com/hFkUcB3l.jpg)
