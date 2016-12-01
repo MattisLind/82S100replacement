@@ -9,3 +9,4 @@ Yes. I am aware that I did a small mistake in that the JTAG connector doesn't ha
 
 ![In C64](http://i.imgur.com/hFkUcB3l.jpg)
 
+Compared with other C64 PLA replacements this one is more generic 82S100 or 82S101 replacement since the #OE signal is provided at pin 19 and there is no special buffering on the outputs so they can be either tristate or open collector as the designer of the WinCUPL file wishes.
