@@ -16,3 +16,5 @@ Compared with other C64 PLA replacements this one is more generic 82S100 or 82S1
 The CPLD used is an Atmel ATF1502ASL-25AU44. The good thing with this Atmel part is that it is 5V. Not just 5V tolerant. The L variant is also Low power and the slowest part which is good when emulating old parts. Mouser order# [556-AF1502ASL25AU44](http://www.mouser.se/Search/ProductDetail.aspx?R=ATF1502ASL-25AU44). The decoupling capacitor is a 0.22uF ceramic. Mouser order# [80-C0805C224K5R](http://www.mouser.se/Search/ProductDetail.aspx?R=C0805C224K5RACTU). 
 
 Since Xilinx XC9536 and EPM7032S is pin compatible they can be used as far as I can see. However both these vendors has discontinued their 5V lines. Althoug devices can probably be found from surplus sellers.
+
+To program the part you need to download the WinCUPL software fomr Atmel site. It is free and runs under Windows. Then to download your design to the chip you need a JTAG ISP cable, ATDH1150USB-K. 
