@@ -1,0 +1,87 @@
+Name     C64 ;
+PartNo   00 ;
+Date     2016-11-30 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Dalby Datormuseum ;
+Assembly None ;
+Location  ;
+Device   f1502isptqfp44 ;
+
+PIN 42 = a13;
+PIN 43 = a14;
+PIN 44 = a15;
+PIN 2  = n_va14;
+PIN 3 = n_charen;
+PIN 6 = n_hiram;
+PIN 8 = n_loram;
+PIN 11 = n_cas;
+PIN 23 = va12;
+PIN 25 = va13;
+PIN 27 = n_game;
+PIN 30 = n_exrom;
+PIN 33 = rd;
+PIN 34 = n_aec;
+PIN 35 = ba;
+PIN 37 = a12;
+
+PIN 12 = n_romh;
+PIN 13 = n_roml;
+PIN 14 = n_io;
+PIN 15 = n_grw;
+PIN 18 = n_charrom;
+PIN 19 = n_kernel;
+PIN 20 = n_basic;
+PIN 21 = n_casram;
+
+
+
+
+
+p0 = n_loram & n_hiram & a15 & ! a14 & a13 & ! n_aec & rd & n_game;
+p1 = n_hiram & a15 & a14 & a13 & ! n_aec & rd & n_game;
+p2 = n_hiram & a15 & a14 & a13 & ! n_aec & rd & ! n_exrom & ! n_game;
+p3 = n_hiram & ! n_charen & a15 & a14 & ! a13 & a12 & ! n_aec & rd & n_game;
+p4 = n_loram & ! n_charen & a15 & a14 & ! a13 & a12 & ! n_aec & rd & n_game;
+p5 = n_hiram & ! n_charen & a15 & a14 & ! a13 & a12 & ! n_aec & rd & ! n_exrom & ! n_game;
+p6 = n_va14 & n_aec & n_game & ! va13 & va12;
+p7 = n_va14 & n_aec & ! n_exrom & ! n_game & ! va13 & va12;
+p8 = n_hiram & n_charen & a15 & a14 & ! a13 & a12 & ba & ! n_aec & rd & n_game;
+p9 = n_hiram & n_charen & a15 & a14 & ! a13 & a12 & ! n_aec & ! rd & n_game;
+p10 = n_loram & n_charen & a15 & a14 & ! a13 & a12 & ba & ! n_aec & rd & n_game;
+p11 = n_loram & n_charen & a15 & a14 & ! a13 & a12 & ! n_aec & ! rd & n_game;
+p12 = n_hiram & n_charen & a15 & a14 & ! a13 & a12 & ba & ! n_aec & rd & ! n_exrom & ! n_game;
+p13 = n_hiram & n_charen & a15 & a14 & ! a13 & a12 & ! n_aec & ! rd & ! n_exrom & ! n_game;
+p14 = n_loram & n_charen & a15 & a14 & ! a13 & a12 & ba & ! n_aec & rd & ! n_exrom & ! n_game;
+p15 = n_loram & n_charen & a15 & a14 & ! a13 & a12 & ! n_aec & ! rd & ! n_exrom & ! n_game;
+p16 = a15 & a14 & ! a13 & a12 & ba & ! n_aec & rd & n_exrom & ! n_game;
+p17 = a15 & a14 & ! a13 & a12 & ! n_aec & ! rd & n_exrom & ! n_game;
+p18 = n_loram & n_hiram & a15 & ! a14 & ! a13 & ! n_aec & rd & ! n_exrom;
+p19 = a15 & ! a14 & ! a13 & ! n_aec & n_exrom & ! n_game;
+p20 = n_hiram & a15 & ! a14 & a13 & ! n_aec & rd & ! n_exrom & ! n_game;
+p21 = a15 & a14 & a13 & ! n_aec & n_exrom & ! n_game;
+p22 = n_aec & n_exrom & ! n_game & va13 & va12;
+p23 = ! a15 & ! a14 & a12 & n_exrom & ! n_game;
+p24 = ! a15 & ! a14 & a13 & n_exrom & ! n_game;
+p25 = ! a15 & a14 & n_exrom & ! n_game;
+p26 = a15 & ! a14 & a13 & n_exrom & ! n_game;
+p27 = a15 & a14 & ! a13 & ! a12 & n_exrom & ! n_game;
+p28 = n_cas;
+p29 = ! n_cas & a15 & a14 & ! a13 & a12 & ! n_aec & ! rd;
+
+
+n_casram = p0 # p1 # p2 # p3 # p4 # p5 # p6 # p7 # p8 # p9 # p10 # p11 # p12 # p13 # p14 # p15 # p16 # p17 # p18 # p19 # p20 # p21 # p22 # p23 # p24 # p25 # p26 # p27 # p28;
+
+n_basic = ! (p0);
+
+n_kernel = ! (p1 # p2);
+
+n_charrom = ! (p3 # p4 # p5 # p6 # p7);
+
+n_grw = ! (p29);
+
+n_io = ! (p8 # p9 # p10 # p11 # p12 # p13 # p14 # p15 # p16 # p17);
+
+n_roml = ! (p18 # p19);
+
+n_romh = ! (p20 # p21 # p22);
