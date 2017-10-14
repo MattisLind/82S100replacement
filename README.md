@@ -19,6 +19,8 @@ Since Xilinx XC9536 and EPM7032S is pin compatible they can be used as far as I 
 
 To program the part you need to download the WinCUPL software fomr Atmel site. It is free and runs under Windows. Then to download your design to the chip you need a JTAG ISP cable, ATDH1150USB-K.
 
+["jamarju"](https://github.com/jamarju) contributed with information on a cheaper way to program the Atmel devices:
+
 As an alternative, if you have an old computer with LPT1, you can build this cable:
 
 ![Atmel CPLD LPT programmer](img/byteblaster-sch.jpg)
