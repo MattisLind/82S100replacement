@@ -17,4 +17,16 @@ The CPLD used is an Atmel ATF1502ASL-25AU44. The good thing with this Atmel part
 
 Since Xilinx XC9536 and EPM7032S is pin compatible they can be used as far as I can see. However both these vendors has discontinued their 5V lines. Althoug devices can probably be found from surplus sellers.
 
-To program the part you need to download the WinCUPL software fomr Atmel site. It is free and runs under Windows. Then to download your design to the chip you need a JTAG ISP cable, ATDH1150USB-K. 
+To program the part you need to download the WinCUPL software fomr Atmel site. It is free and runs under Windows. Then to download your design to the chip you need a JTAG ISP cable, ATDH1150USB-K.
+
+As an alternative, if you have an old computer with LPT1, you can build this cable:
+
+![Atmel CPLD LPT programmer](img/byteblaster-sch.jpg)
+
+I used a cut out USB cable to get the 5V for VREF and tied the DB-25 and USB GNDs together. Also pin 13 out of the DB-25 is not needed, so the only components needed are 1x 33 ohm and 1x DB-25 male connector.
+
+![DIY byteblaster](img/diy-byteblaster-mv.jpg)
+
+Use the older XP/2000 [ATMISP v6.7](http://www.atmel.com/tools/atmisp.aspx) version and choose "ByteBlasterMV" as programmer:
+
+![ATMISP setup](img/atmisp67-setup.png)
