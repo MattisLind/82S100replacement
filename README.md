@@ -29,6 +29,6 @@ I used a cut out USB cable to get the 5V for VREF and tied the DB-25 and USB GND
 
 ![DIY byteblaster](img/diy-byteblaster-mv.jpg)
 
-Use the older XP/2000 [ATMISP v6.7](http://www.atmel.com/tools/atmisp.aspx) version and choose "ByteBlasterMV" as programmer:
+Use the older XP/2000 [ATMISP v6.7](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp) version and choose "ByteBlasterMV" as programmer:
 
 ![ATMISP setup](img/atmisp67-setup.png)
